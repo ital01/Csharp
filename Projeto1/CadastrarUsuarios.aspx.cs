@@ -110,6 +110,8 @@ namespace Projeto1
 
             DataBase.Open();
 
+            DataBase.Open();
+
             DataTable tb = (DataTable)DataBase.Command.Query(comandoSQL);
 
             if (tb.Rows.Count > 0) 
