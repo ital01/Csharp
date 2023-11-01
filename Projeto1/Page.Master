@@ -1,0 +1,79 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Page.master.cs" Inherits="Projeto1.Page" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="Css/Projeto.css" rel="stylesheet" />
+    <link href="Css/StyleSheet.css" rel="stylesheet" />
+    
+    <!-- bibliotecas para slide em páginas -->
+    <link href="JavaScript/flexslider.css" rel="stylesheet" />
+    <script src="JavaScript/jquery-1.7.2.min.js"></script>
+    <script src="JavaScript/flexslider.min.js"></script>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!--Cabeçalho-->
+        <div class="cabecalho content-wrap">
+            <div class="logomarca">
+                <asp:Image ID="Image1" ImageUrl="~/images/marca1.png" runat="server" />
+            </div>
+            <div class="barra-titulo" style="text-align:left">
+                <br />
+                
+                <h1>Análise Desenvolvimento de Sistemas</h1>
+            </div>
+            <div class="barra-menu">
+                <a href="Default.aspx">Home</a>
+                <a href="Sobre.aspx">Sobre Nós</a>
+                <a href="Contato.aspx">Fale Conosco</a>
+                <a href="Cadastro.aspx">Entrar</a>
+            </div>
+        </div>
+        <hr />
+        <!--Conteúdo-->
+        <div class="conteudo content-wrap">
+            <asp:ContentPlaceHolder ID="Conteudo" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <!--Rodapé-->
+        <div class="rodape">
+            <div class="content-wrap">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="box margin-right-20">
+                            <h2> FATEC </h2>
+                            <br />
+                            <h3>Análise e Desenvolvimento de Sistemas</h3>
+                            <h4>Americana - SP</h4>
+                        </div>
+                    </div>
+                
+                    <div class="col-4">
+                        <div class="box margin-right-20">
+                            <h2> MENU </h2>
+                            <br />
+                            <h3><a href="Default.aspx">Home</a></h3>
+                            <h3><a href="Sobre.aspx">Sobre Nós</a></h3>
+                            <h3><a href="Contato.aspx">Fale Conosco</a></h3>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="box" style="text-align:right">
+                                <asp:Image ID="Image2" ImageUrl="~/images/marca1.png" runat="server" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
