@@ -102,9 +102,11 @@ namespace Projeto1
 
         protected void ListaUsuarios_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Codigo.Text = ListaUsuarios.SelectedRow.Cells[1].ToString();
+            Codigo.Text = ListaUsuarios.SelectedRow.Cells[1].Text;
 
             string comandoSQL = "SELECT * FROM Usuarios WHERE Codigo=" + Codigo.Text;
+
+            DataBase.Open();
 
             DataBase.Open();
 
