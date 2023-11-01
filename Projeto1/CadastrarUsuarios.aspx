@@ -52,7 +52,14 @@
         <!-- LISTA -->
         <div class="col-6">
             <div class="box border">
-                <asp:GridView ID="ListaUsuarios" Width="100%" CellPadding="6" runat="server"></asp:GridView>
+                <asp:GridView 
+                    AutoGenerateSelectButton="True" 
+                    OnSelectedIndexChanged="ListaUsuarios_SelectedIndexChanged" 
+                    ID="ListaUsuarios" 
+                    Width="100%" 
+                    CellPadding="6" 
+                    runat="server"
+                    ></asp:GridView>
             </div>
         </div>
 

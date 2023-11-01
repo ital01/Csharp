@@ -1,6 +1,7 @@
 ﻿using Model;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.Security;
@@ -97,6 +98,28 @@ namespace Projeto1
         protected void Excluir_Click(object sender, EventArgs e)
         {
 
+        }
+
+        protected void ListaUsuarios_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Codigo.Text = ListaUsuarios.SelectedRow.Cells[1].ToString();
+
+            string comandoSQL = "SELECT * FROM Usuarios WHERE Codigo=" + Codigo.Text;
+
+            DataBase.Open();
+
+            DataTable tb = (DataTable)DataBase.Command.Query(comandoSQL);
+
+            if (tb.Rows.Count > 0) 
+            {
+                Nome.Text = tb.Rows[0]["Nome"].ToString();
+                Email.Text = tb.Rows[0]["Email"].ToString();
+                Telefone.Text = tb.Rows[0]["Telefone"].ToString();
+                NomeAcesso.Text = tb.Rows[0]["NomeAcesso"].ToString();
+                Senha.Text = tb.Rows[0]["Senha"].ToString();
+                Anotacoes.Text = tb.Rows[0]["Anotacoes"].ToString();
+                status.Text = tb.Rows[0]["status"].ToString();
+            }
         }
     }
 }

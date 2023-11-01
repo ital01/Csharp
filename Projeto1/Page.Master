@@ -33,7 +33,7 @@
                 <a href="Default.aspx">Home</a>
                 <a href="Sobre.aspx">Sobre Nós</a>
                 <a href="Contato.aspx">Fale Conosco</a>
-                <a href="Cadastro.aspx">Entrar</a>
+                <a href="CadastrarUsuarios.aspx">Entrar</a>
             </div>
         </div>
         <hr />
